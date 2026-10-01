@@ -50,7 +50,7 @@ $(function () {
   createCannon("left", 650, 1)
   createCannon("top", 350, 1200)
   createCannon("right", 420, 2000)
-  
+  //I dont know what I did wrong but I think the push command hates me
   
 
 
