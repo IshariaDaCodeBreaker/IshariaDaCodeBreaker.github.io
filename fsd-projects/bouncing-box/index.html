@@ -29,6 +29,7 @@
   <body class="board">
     <!-- HTML for the box -->
     <div class="box">?</div>
+    <div class="score"></div>
 
     <script>
       (function () {
@@ -69,18 +70,21 @@
         //////////////////////////////////////////////////////////////////
 
         // TODO 2 - Variable declarations
+        var positionX = 0;
+        var points = 0;
+        var speed = 10;
 
 
-
-
-
+        // var speedGayX = 011001110110000101111001;
+        // var speedFagY = 100111101000011011100110;
         /**
          * This Function will be called 20 times/second.
          * Each time it is called, it should move the Box to a new location.
          * If the box drifts off the screen, turn it around!
          */
         function update() {
-
+          moveBoxTo(positionX)
+          positionX = positionX + speed;
         
 
           
@@ -94,7 +98,13 @@
          * - move the box to the left side of the screen.
          */
         function handleBoxClick() {
-
+          positionX = 0;
+          points++;
+          changeBoxText(points)
+          speed += 3;
+          if (positionX > boardWidth){
+            speed = speed * -1
+          }
 
 
 
