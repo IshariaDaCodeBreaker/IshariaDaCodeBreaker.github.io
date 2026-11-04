@@ -8,7 +8,7 @@
       .box {
         width: 70px;
         height: 70px;
-        background-color: teal;
+        background-image: url(Images/Flying Spiderman.png);
         font-size: 300%;
         text-align: center;
         user-select: none;
@@ -78,7 +78,7 @@
         var speed = 10;
         var positionY = 0;
         var speedY = 10;
-        var randNum = Math.random() * 100;
+
         // var speedGayX = 011001110110000101111001;
         // var speedFagY = 100111101000011011100110;
         /**
@@ -103,6 +103,7 @@
           else if (positionY < 0){
             speedY = speedY *-1
           }
+        
 
           
         }
@@ -115,7 +116,7 @@
          * - move the box to the left side of the screen.
          */
         function handleBoxClick() {
-          positionX = 0;
+          positionX = Math.random() * boardWidth;
           positionY = 0;
           points++;
           changeBoxText(points)
